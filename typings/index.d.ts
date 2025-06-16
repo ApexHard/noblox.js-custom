@@ -2196,10 +2196,9 @@ declare module "noblox.js" {
     function getBlurb(userId: number): Promise<string>;
 
     /**
-     * ✅ Gets the `id` of user with `username` and caches according to settings.
-     * Username is not case-sensitive.
+     * ✅ Obtém o `id` do usuário com `username` e armazena em cache de acordo com as configurações. Se o 'boolean' tiver 'true', você vai receber as informações completo. Por padrão, você só vai receber o 'id'
      */
-    function getIdFromUsername<T extends string | string[]>(username: T): T extends string ? Promise<number> : Promise<number[]>;
+    function getIdFromUsername<T extends string | string[]>(username: T, boolean: false): T extends string ? Promise<number> : Promise<number[]>;
 
     /**
      * ✅ Gets a brief overview of a user.
