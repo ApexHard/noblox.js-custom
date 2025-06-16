@@ -15,7 +15,7 @@
     "timeout_desc": "Maximum time (in milliseconds) a request can take. If your server has extremely high latency you may have to raise this.",
     "event_desc": "Below is the poll time (in milliseconds) for each of the event functions. A lower number will detect changes much quicker but will stress the network, a higher one does the opposite.",
     "defaultDelay": 10000,
-    "onAuditLog": 10000,
+    "onAuditLog": 7000,
     "onWallPost": 10000,
     "onJoinRequestHandle": 10000,
     "onJoinRequest": 10000,
