@@ -1,19 +1,19 @@
 {
   "show_deprecation_warnings": true,
-  "show_deprecation_warnings_desc": "Prints console warnings for functions that are being polyfilled by newer methods due to upstream Roblox API changes",
+  "show_deprecation_warnings_desc": "Imprime avisos de console para funções que estão sendo preenchidas por métodos mais recentes devido a alterações na API do Roblox upstream.",
 
   "session_only": true,
-  "session_only_desc": "Minimizes data usage and speed up requests by only saving session cookies, disable if you need other cookies to be saved as well.",
+  "session_only_desc": "Minimiza o uso de dados e acelera as solicitações salvando apenas os cookies de sessão. Desative se precisar que outros cookies também sejam salvos.",
 
   "timeout": 10000,
-  "timeout_desc": "Timeout for http requests. This is necessary for functions that make a very large number of requests, where it is possible some simply won't connect.",
+  "timeout_desc": "Tempo limite para requisições http. Isso é necessário para funções que fazem um número muito grande de requisições, onde é possível que algumas delas simplesmente não se conectem.",
 
   "event": {
     "maxRetries": 5,
-    "maxRetries_desc": "Maximum number of consecutive retries after an event times out or fails in some other way.",
+    "maxRetries_desc": "Número máximo de tentativas consecutivas após um evento expirar ou falhar de alguma outra forma.",
     "timeout": 10000,
-    "timeout_desc": "Maximum time (in milliseconds) a request can take. If your server has extremely high latency you may have to raise this.",
-    "event_desc": "Below is the poll time (in milliseconds) for each of the event functions. A lower number will detect changes much quicker but will stress the network, a higher one does the opposite.",
+    "timeout_desc": "Tempo máximo (em milissegundos) que uma solicitação pode levar. Se o seu servidor tiver latência extremamente alta, talvez seja necessário aumentar esse tempo.",
+    "event_desc": "Abaixo está o tempo de pesquisa (em milissegundos) para cada uma das funções de evento. Um número menor detectará alterações muito mais rapidamente, mas sobrecarregará a rede; um número maior fará o oposto.",
     "defaultDelay": 10000,
     "onAuditLog": 7000,
     "onWallPost": 10000,
@@ -26,20 +26,20 @@
 
   "thumbnail": {
     "maxRetries": 2,
-    "maxRetries_desc": "Maximum number of retries to retrieve a pending thumbnail, rare, but occurs with uncached users (Roblox's cache)",
+    "maxRetries_desc": "Número máximo de tentativas para recuperar uma miniatura pendente, raro, mas ocorre com usuários sem cache (cache do Roblox)",
     "retryDelay": 500,
-    "retryDelay_desc": "The time to wait between consecutive retries of retrieving pending thumbnails",
+    "retryDelay_desc": "O tempo de espera entre tentativas consecutivas de recuperação de miniaturas pendentes",
     "failedUrl": {
       "pending": "",
       "blocked": ""
     },
-    "failedUrl_desc": "The image URL to provide when an asset thumbnail is still pending or has been moderated by Roblox; defaults to Roblox moderation icon via noblox.js's GitHub repo at https://noblox.js.org/moderatedThumbnails/moderatedThumbnail_{size}.png"
+    "failedUrl_desc": "A URL da imagem a ser fornecida quando uma miniatura de ativo ainda estiver pendente ou tiver sido moderada pelo Roblox; o padrão é o ícone de moderação do Roblox por meio do repositório GitHub do noblox.js em https://noblox.js.org/moderatedThumbnails/moderatedThumbnail_{size}.png"
   },
 
   "queue": {
     "Message": {
       "delay": 0,
-      "desc": "Although messages do have a floodcheck, it is not instituted immediately so this is disabled by default. If you are sending a lot of messages set a delay around 10-15 seconds (10000-15000)"
+      "desc": "Embora as mensagens tenham um floodcheck, ele não é acionado imediatamente, portanto, está desabilitado por padrão. Se você estiver enviando muitas mensagens, defina um atraso de cerca de 10 a 15 segundos (10.000 a 15.000)."
     }
   },
 
@@ -47,55 +47,55 @@
     "XCSRF": {
       "expire": 1800,
       "refresh": false,
-      "desc": "XCSRF tokens expire 30 minutes after being created. Until they expire, however, no new tokens can be made. Sometimes an XCSRF token has already been created for the user so the server doesn't know when to collect a new one. During transitions some requests may use invalid tokens. For now, new XCSRF tokens are automatically retrieved when cached ones get rejected."
+      "desc": "Os tokens XCSRF expiram 30 minutos após serem criados. No entanto, até que expirem, nenhum novo token pode ser criado. Às vezes, um token XCSRF já foi criado para o usuário, então o servidor não sabe quando coletar um novo. Durante as transições, algumas solicitações podem usar tokens inválidos. Por enquanto, novos tokens XCSRF são recuperados automaticamente quando os armazenados em cache são rejeitados."
     },
 
     "Verify": {
       "expire": 7200,
       "refresh": 3600,
-      "desc": "Verification tokens seem to last extremely long times."
+      "desc": "Os tokens de verificação parecem durar muito tempo."
      },
 
     "Roles": {
       "expire": 600,
       "refresh": true,
-      "desc": "This should be fine unless your group changes its ranks often."
+      "desc": "Isso deve ser suficiente, a menos que seu grupo mude de classificação com frequência."
      },
 
     "RolesetId": {
       "expire": 86400,
       "refresh": false,
-      "desc": "Disable this completely if you don't plan on ever changing your exile bot's rank."
+      "desc": "Desabilite isso completamente se você não planeja mudar a classificação do seu bot de exílio."
      },
 
     "Product": {
       "expire": false,
       "refresh": false,
-      "desc": "Disabled by default for security (price checks). If you are only working with ROBLOX assets, however, you can set this to something high (since ROBLOX product info rarely changes)."
+      "desc": "Desativado por padrão para segurança (verificação de preços). No entanto, se você estiver trabalhando apenas com ativos do ROBLOX, pode definir um valor alto (já que as informações do produto ROBLOX raramente mudam)."
      },
 
     "GamePassProduct": {
       "expire": 86400,
       "refresh": false,
-      "desc": "This should normally be fine unless the information of GamePasses you are working with changes frequently."
+      "desc": "Normalmente, isso não deve causar problemas, a menos que as informações dos GamePasses com os quais você está trabalhando mudem com frequência."
     },
 
     "NameFromID": {
       "expire": false,
       "refresh": false,
-      "desc": "Caches a user's username based on their ID. It is not on by default because it is an uncontrollable change but the option is there to cache it if you would like."
+      "desc": "Armazena em cache o nome de usuário com base no ID. Não está ativado por padrão, pois é uma alteração incontrolável, mas existe a opção de armazená-lo em cache, se desejar."
      },
 
     "IDFromName": {
       "expire": true,
       "refresh": false,
-      "desc": "Permanent cache for a user's ID based on their name. There is no reason this would ever change (changing names would re-match it and old names cannot be reused by other accounts). Only disable if you want this to match current names only."
+      "desc": "Cache permanente para o ID de um usuário com base no nome. Não há motivo para que isso mude (alterar nomes faria com que ele fosse correspondido novamente, e nomes antigos não podem ser reutilizados por outras contas). Desative somente se quiser que isso corresponda apenas aos nomes atuais."
      },
 
      "SenderID": {
        "expire": true,
        "refresh": false,
-       "desc": "Permanent cache for the sender's user ID. This should literally never change."
+       "desc": "Cache permanente para o ID de usuário do remetente. Isso literalmente nunca deve mudar."
      },
 
     "Rank": {
@@ -107,7 +107,7 @@
      "UsernameHistory": {
       "expire": 86400,
       "refresh": false,
-      "desc": "Caches a user's username history based on user id, limit, sort order, and cursor. The rate limit for the associated endpoint is very low, and this setting should be left alone as a result."
+      "desc": "Os caches são classificados por ID do usuário. Alterações não podem ser previstas, portanto, essa opção não é habilitada por padrão."
      }
   }
 }
