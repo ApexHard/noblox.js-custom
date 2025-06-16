@@ -1988,10 +1988,14 @@ declare module "noblox.js" {
      */
     function getPlayers(group: number, rolesetId: number[] | number, sortOrder?: SortOrder, limit?: number, jar?: CookieJar): Promise<GroupUser[]>;
 
-    /**
-         * ✅ Gets `rank` of user with `userId` in `group` and caches according to settings.
-         */
-    function getRankInGroup(group: number, userId: number): Promise<number>;
+     /**
+     * ✅ Obtém a `classificação` de um usuário com `userId` em um `grupo` e armazena em cache de acordo com as configurações.
+     * @param group - ID do grupo.
+     * @param userId - ID de usuário.
+     * @param detailed - Se `true`, retorna um objeto com informações detalhadas de classificação, se `false`, retorna apenas o número de classificação.
+     * @returns Uma Promessa resolvida para um número (classificação) ou um objeto com informações detalhadas.
+     */
+    function getRankInGroup(group: number, userId: number, detailed: boolean): Promise<number | { rank: number; name: string; id: number }>;
 
     /**
      * ✅ Gets the rank `name` of user with `userId` in `group` and caches according to settings.
